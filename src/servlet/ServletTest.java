@@ -12,17 +12,17 @@ import javax.servlet.http.HttpServletResponse;
 public class ServletTest extends HttpServlet{
 
 	public void doPost(
-			HttpServletRequest request, HttpServletResponse response
-		)throws ServletException, IOException{
+		HttpServletRequest request, HttpServletResponse response
+	)throws ServletException, IOException{
 
-			String document=request.getParameter("document");
-			String yes="Yes";
-			//String no="No";
+		String document=request.getParameter("document");
+		String yes="Yes";
+		//String no="No";
 
-			if(document.equals(yes)) {
-				request.getRequestDispatcher("../jsp/DocumentYes.jsp").forward(request, response);
-			}else {
-				request.getRequestDispatcher("../jsp/DocumentNo.jsp").forward(request, response);
-			}
+		if(document.equals(yes)) {
+			request.getRequestDispatcher("../jsp/DocumentYes.jsp").forward(request, response);
+		}else {
+			request.getRequestDispatcher("../jsp/DocumentNo.jsp").forward(request, response);
+		}
 	}
 }
